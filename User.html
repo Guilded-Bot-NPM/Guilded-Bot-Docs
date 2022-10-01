@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Webhook - Documentation</title>
+    <title>User - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Webhook</h1>
+    <h1 class="page-title">User</h1>
     
 
     
@@ -42,7 +42,7 @@
 <header>
     
         <h2>
-        Webhook
+        User
         </h2>
         
     
@@ -56,14 +56,14 @@
 
     
 
-    <h4 class="name" id="Webhook"><span class="type-signature"></span>new Webhook<span class="signature">(webhookData)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="User"><span class="type-signature"></span>new User<span class="signature">(userData)</span><span class="type-signature"> &rarr; {<a href="User.html">User</a>.&lt;String, (String|undefined), (Object|undefined), String, String, (URL|undefined), (URL|undefined)>}</span></h4>
 
     
 
 
 
 <div class="description">
-    <p>Weebhook constructor</p>
+    <p>User constructor</p>
 </div>
 
 
@@ -99,7 +99,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="classes_webhook_Webhook.js.html">classes/webhook/Webhook.js</a>, <a href="classes_webhook_Webhook.js.html#line14">line 14</a>
+        <a href="classes_user_User.js.html">classes/user/User.js</a>, <a href="classes_user_User.js.html#line20">line 20</a>
     </li></ul></dd>
     
 
@@ -143,7 +143,7 @@
 
         <tr>
             
-                <td class="name"><code>webhookData</code></td>
+                <td class="name"><code>userData</code></td>
             
 
             <td class="type">
@@ -160,7 +160,7 @@
             
 
             <td class="description last">
-                <p>The webhook data</p>
+                <p>The user data</p>
                 
                     
 
@@ -203,7 +203,145 @@
             
 
             <td class="description last">
-                <p>The webhook id</p>
+                <p>The user id</p>
+                
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>botId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>String</code></span>
+|
+
+<span class="param-type"><code>undefined</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The bot id</p>
+                
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>server</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>Object</code></span>
+|
+
+<span class="param-type"><code>undefined</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The server</p>
+                
+                    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>String</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The server id</p>
+                
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+                
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><code>String</code></span>
+|
+
+<span class="param-type"><code>undefined</code></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">
+                <p>The user type</p>
                 
             </td>
         </tr>
@@ -229,85 +367,7 @@
             
 
             <td class="description last">
-                <p>The webhook name</p>
-                
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>channelId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><code>String</code></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <p>The channel id of the webhook</p>
-                
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>serverId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><code>String</code></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <p>The server id of the webhook</p>
-                
-            </td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>createdBy</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><code>String</code></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">
-                <p>The user id of the user who created the webhook</p>
+                <p>The username of the user</p>
                 
             </td>
         </tr>
@@ -333,7 +393,7 @@
             
 
             <td class="description last">
-                <p>The date the webhook was created</p>
+                <p>The date the user was created</p>
                 
             </td>
         </tr>
@@ -342,13 +402,16 @@
 
         <tr>
             
-                <td class="name"><code>deletedAt</code></td>
+                <td class="name"><code>banner</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><code>String</code></span>
+<span class="param-type"><code>URL</code></span>
+|
+
+<span class="param-type"><code>undefined</code></span>
 
 
             
@@ -359,7 +422,7 @@
             
 
             <td class="description last">
-                <p>The date the webhook was deleted</p>
+                <p>The banner of the user</p>
                 
             </td>
         </tr>
@@ -368,13 +431,16 @@
 
         <tr>
             
-                <td class="name"><code>token</code></td>
+                <td class="name"><code>avatar</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><code>String</code></span>
+<span class="param-type"><code>URL</code></span>
+|
+
+<span class="param-type"><code>undefined</code></span>
 
 
             
@@ -385,7 +451,7 @@
             
 
             <td class="description last">
-                <p>The webhook token</p>
+                <p>The avatar of the user</p>
                 
             </td>
         </tr>
@@ -414,6 +480,31 @@
 
 
 
+
+<div class="section-returns">
+<h5>Returns:</h5>
+
+        
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type"><code><a href="User.html">User</a>.&lt;String, (String|undefined), (Object|undefined), String, String, (URL|undefined), (URL|undefined)></code></span>
+
+
+    </dd>
+</dl>
+
+
+<div class="param-desc">
+    <p>The user id, the bot id, the server, the user type, the username of the user, the date the user was created, the banner of the user, the avatar of the user</p>
+</div>
+
+    
+</div>
 
 
 
@@ -433,6 +524,232 @@
 
     
 
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+<div class="section-method">
+
+    
+
+    <h4 class="name" id="getAvatarURL"><span class="type-signature"></span>getAvatarURL<span class="signature">()</span><span class="type-signature"> &rarr; {string|null}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Function will return the user's profile picture</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="classes_user_User.js.html">classes/user/User.js</a>, <a href="classes_user_User.js.html#line56">line 56</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+
+        
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type"><code>string</code></span>
+|
+
+<span class="param-type"><code>null</code></span>
+
+
+    </dd>
+</dl>
+
+
+<div class="param-desc">
+    <p>The user's profile picture</p>
+</div>
+
+    
+</div>
+
+
+
+</div>
+        
+            
+<div class="section-method">
+
+    
+
+    <h4 class="name" id="getBannerURL"><span class="type-signature"></span>getBannerURL<span class="signature">()</span><span class="type-signature"> &rarr; {url|null}</span></h4>
+
+    
+
+
+
+<div class="description">
+    <p>Function will return the user's banner</p>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="classes_user_User.js.html">classes/user/User.js</a>, <a href="classes_user_User.js.html#line67">line 67</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section-returns">
+<h5>Returns:</h5>
+
+        
+
+<dl class="param-type">
+    <dt>
+        Type:
+    </dt>
+    <dd>
+        
+<span class="param-type"><code>url</code></span>
+|
+
+<span class="param-type"><code>null</code></span>
+
+
+    </dd>
+</dl>
+
+
+<div class="param-desc">
+    <p>The user's banner</p>
+</div>
+
+    
+</div>
+
+
+
+</div>
+        
     
 
     
