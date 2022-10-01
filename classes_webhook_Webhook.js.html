@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Home - Documentation</title>
+    <title>classes/webhook/Webhook.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,46 +29,60 @@
 
 <div id="main">
     
+    <h1 class="page-title">classes/webhook/Webhook.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>class Webhook {
+  /**
+   * Weebhook constructor
+   * @param {Object} webhookData The webhook data
+   * @param {String} webhookData.id The webhook id
+   * @param {String} webhookData.name The webhook name
+   * @param {String} webhookData.channelId The channel id of the webhook
+   * @param {String} webhookData.serverId The server id of the webhook
+   * @param {String} webhookData.createdBy The user id of the user who created the webhook
+   * @param {String} webhookData.createdAt The date the webhook was created
+   * @param {String} webhookData.deletedAt The date the webhook was deleted
+   * @param {String} webhookData.token The webhook token
+   */
+  constructor(webhookData) {
+    this.id = webhookData.webhook.id;
+    this.name = webhookData.webhook.name;
+    this.channelId = webhookData.webhook.channelId;
+    this.channel = webhookData.webhook.channelId
+      ? {
+          id: webhookData.webhook.channelId,
+        }
+      : null;
+    this.serverId = webhookData.webhook.serverId;
+    this.server = webhookData.webhook.serverId
+      ? {
+          id: webhookData.webhook.serverId,
+        }
+      : null;
+    this.createdAt = webhookData.webhook.createdAt;
+    this.author = webhookData.webhook.createdBy
+      ? {
+          id: webhookData.webhook.createdBy,
+        }
+      : null;
 
+    this.deletedAt = webhookData.webhook.deletedAt;
+    this.token = webhookData.webhook.token;
+  }
+}
 
-
-
-
-
-
-
-
-    
-
-
-    <section class="readme">
-        <article><h1>Guilded Bot</h1>
-<p>Guilded Bot is a package that allows you to easily create a bot for the <a href="https://www.guilded.gg">Guilded</a> chat platform.</p>
-<h2>Installation</h2>
-<p>Use the package manager <a href="https://www.npmjs.com/">npm</a> to install Guilded Bot.</p>
-<pre class="prettyprint source lang-bash"><code>npm install guilded-bot
+module.exports.Webhook = Webhook;
 </code></pre>
-<h2>Usage/Examples</h2>
-<pre class="prettyprint source lang-javascript"><code>const Guilded = require(&quot;../index.js&quot;);
-const client = new Guilded.Client(&quot;Your-Token-Here&quot;);
-
-client.on(&quot;ready&quot;, () => {
-  console.log(&quot;I am ready!&quot;);
-});
-</code></pre>
-<h2>Documentation</h2>
-<p>Comming Soon</p>
-<h2>Badges</h2>
-<p><img src="https://img.shields.io/npm/l/guilded-bot?style=for-the-badge" alt="NPM"> <img src="https://img.shields.io/bundlephobia/min/guilded-bot?style=for-the-badge" alt="npm bundle size"> <img src="https://img.shields.io/npms-io/final-score/guilded-bot?style=for-the-badge" alt="npms.io (final)"></p></article>
+        </article>
     </section>
-
-
 
 
 
