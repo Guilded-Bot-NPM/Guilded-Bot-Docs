@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>classes/structures/Reaction.js - Documentation</title>
+    <title>classes/structures/User/MemberBan.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">classes/structures/Reaction.js</h1>
+    <h1 class="page-title">classes/structures/User/MemberBan.js</h1>
     
 
     
@@ -39,35 +39,28 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>
-class Reaction {
-  /**
-   * Reaction Object
-   * @param {Object} data
-   * @param {String} data.serverId The ID of the server of the reaction
-   * @param {Object} data.reaction The reaction object
-   * @param {String} data.reaction.channelId The ID of the channel of the reaction
-   * @param {String} data.reaction.messageId The ID of the message of the reaction
-   * @param {String} data.reaction.createdBy The ID of the user who created the reaction
-   * @param {Object} data.reaction.emote The emote object
-   * @param {String} data.reaction.emote.id The ID of the emote
-   * @param {String} data.reaction.emote.name The name of the emote
-   * @param {String} data.reaction.emote.url The URL of the emote
-   */
-  constructor(data) {  
-    this.serverId = data.serverId;
-    this.channelId = data.reaction.channelId
-    this.messageId = data.reaction.messageId;
-    this.createdBy = data.reaction.createdBy;
-    this.emoteId = data.reaction.emote.id;
-    this.emoteName = data.reaction.emote.name;
-    this.emotePartialUrl = data.reaction.emote.url;
-    this.emoteUrl = "https://img.guildedcdn.com" + data.reaction.emote.url;
-    this.raw = data.reaction;
-  }
+            <pre class="prettyprint source linenums"><code>const { UserSummary } = require('./UserSummary');
+
+class MemberBan {
+    /**
+     * MemberBan constructor
+     * @param {Object} banData The ban data
+     * @param {Object} banData.serverMemberBan The server member ban data
+     * @param {Object} banData.serverMemberBan.user The user who was banned
+     * @param {String | undefined} banData.serverMemberBan.reason The reason for the ban
+     * @param {String} banData.serverMemberBan.bannedAt The date the user was banned
+     * @param {String} banData.serverMemberBan.bannedBy The user who banned the user
+     * @returns {MemberBan&lt;UserSummary, String | undefined, String, String>} The user who was banned, the reason for the ban, the date the user was banned, the user who banned the user
+     */
+    constructor(banData) {
+        this.user = new UserSummary(banData.serverMemberBan.user);
+        this.bannedAt = banData.serverMemberBan.createdAt;
+        this.bannedBy = banData.serverMemberBan.createdBy;
+        this.reason = banData.serverMemberBan.reason ?? null;
+    }
 }
 
-module.exports.Reaction = Reaction;</code></pre>
+module.exports.MemberBan = MemberBan;</code></pre>
         </article>
     </section>
 

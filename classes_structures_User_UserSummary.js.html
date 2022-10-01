@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>classes/structures/Reaction.js - Documentation</title>
+    <title>classes/structures/User/UserSummary.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">classes/structures/Reaction.js</h1>
+    <h1 class="page-title">classes/structures/User/UserSummary.js</h1>
     
 
     
@@ -39,35 +39,24 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>
-class Reaction {
-  /**
-   * Reaction Object
-   * @param {Object} data
-   * @param {String} data.serverId The ID of the server of the reaction
-   * @param {Object} data.reaction The reaction object
-   * @param {String} data.reaction.channelId The ID of the channel of the reaction
-   * @param {String} data.reaction.messageId The ID of the message of the reaction
-   * @param {String} data.reaction.createdBy The ID of the user who created the reaction
-   * @param {Object} data.reaction.emote The emote object
-   * @param {String} data.reaction.emote.id The ID of the emote
-   * @param {String} data.reaction.emote.name The name of the emote
-   * @param {String} data.reaction.emote.url The URL of the emote
-   */
-  constructor(data) {  
-    this.serverId = data.serverId;
-    this.channelId = data.reaction.channelId
-    this.messageId = data.reaction.messageId;
-    this.createdBy = data.reaction.createdBy;
-    this.emoteId = data.reaction.emote.id;
-    this.emoteName = data.reaction.emote.name;
-    this.emotePartialUrl = data.reaction.emote.url;
-    this.emoteUrl = "https://img.guildedcdn.com" + data.reaction.emote.url;
-    this.raw = data.reaction;
-  }
+            <pre class="prettyprint source linenums"><code>class UserSummary {
+    /**
+     * UserSummary constructor
+     * @param {Object} userData The user data
+     * @param {String} userData.id The user id
+     * @param {String | undefined} userData.type The user type
+     * @param {String} userData.name The username of the user
+     * @return {UserSummary&lt;String, String | undefined, String, Object>} The user id, the user type, the username of the user
+     */
+    constructor(userData) {
+        this.id = userData.id;
+        this.name = userData.name;
+        this.userType = userData.type ?? null;
+        this.raw = userData;
+    }
 }
 
-module.exports.Reaction = Reaction;</code></pre>
+module.exports.UserSummary = UserSummary;</code></pre>
         </article>
     </section>
 

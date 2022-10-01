@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>classes/structures/Reaction.js - Documentation</title>
+    <title>classes/structures/User/Member.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">classes/structures/Reaction.js</h1>
+    <h1 class="page-title">classes/structures/User/Member.js</h1>
     
 
     
@@ -39,35 +39,33 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>
-class Reaction {
+            <pre class="prettyprint source linenums"><code>const { User } = require("./User");
+
+class Member {
   /**
-   * Reaction Object
-   * @param {Object} data
-   * @param {String} data.serverId The ID of the server of the reaction
-   * @param {Object} data.reaction The reaction object
-   * @param {String} data.reaction.channelId The ID of the channel of the reaction
-   * @param {String} data.reaction.messageId The ID of the message of the reaction
-   * @param {String} data.reaction.createdBy The ID of the user who created the reaction
-   * @param {Object} data.reaction.emote The emote object
-   * @param {String} data.reaction.emote.id The ID of the emote
-   * @param {String} data.reaction.emote.name The name of the emote
-   * @param {String} data.reaction.emote.url The URL of the emote
+   * Member constructor
+   * @param {Object} memberData The member data
+   * @param {User} memberData.user The user
+   * @param {Array&lt;number>} memberData.roleIds The role ids
+   * @param {String | undefined} memberData.nickname The nickname of the user
+   * @param {Date} memberData.joinedAt The date the user joined the server
+   * @param {boolean | undefined} memberData.isOwner Whether the user is the owner of the server
+   * @returns {Member&lt;User, Array&lt;number>, String | undefined, Date, boolean>} The user, the role ids, the nickname of the user, the date the user joined the server, whether the user is the owner of the server
    */
-  constructor(data) {  
-    this.serverId = data.serverId;
-    this.channelId = data.reaction.channelId
-    this.messageId = data.reaction.messageId;
-    this.createdBy = data.reaction.createdBy;
-    this.emoteId = data.reaction.emote.id;
-    this.emoteName = data.reaction.emote.name;
-    this.emotePartialUrl = data.reaction.emote.url;
-    this.emoteUrl = "https://img.guildedcdn.com" + data.reaction.emote.url;
-    this.raw = data.reaction;
+  constructor(memberData) {
+    this.userId = memberData.userId;
+    this.serverId = memberData.serverId ?? null;
+    this.user = new User(memberData.user);
+    this.roles = memberData.roleIds ?? [];
+    this.nickname = memberData.nickname ?? null;
+    this.joinedAt = new Date(memberData.joinedAt);
+    this.isOwner = memberData.isOwner ?? false;
+    this.raw = memberData;
   }
 }
 
-module.exports.Reaction = Reaction;</code></pre>
+module.exports.Member = Member;
+</code></pre>
         </article>
     </section>
 

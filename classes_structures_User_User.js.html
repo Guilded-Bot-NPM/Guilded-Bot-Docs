@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>classes/structures/Reaction.js - Documentation</title>
+    <title>classes/structures/User/User.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -29,7 +29,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">classes/structures/Reaction.js</h1>
+    <h1 class="page-title">classes/structures/User/User.js</h1>
     
 
     
@@ -39,35 +39,82 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>
-class Reaction {
+            <pre class="prettyprint source linenums"><code>const guser = require('../../../helper/Members.js')
+
+class User {
   /**
-   * Reaction Object
-   * @param {Object} data
-   * @param {String} data.serverId The ID of the server of the reaction
-   * @param {Object} data.reaction The reaction object
-   * @param {String} data.reaction.channelId The ID of the channel of the reaction
-   * @param {String} data.reaction.messageId The ID of the message of the reaction
-   * @param {String} data.reaction.createdBy The ID of the user who created the reaction
-   * @param {Object} data.reaction.emote The emote object
-   * @param {String} data.reaction.emote.id The ID of the emote
-   * @param {String} data.reaction.emote.name The name of the emote
-   * @param {String} data.reaction.emote.url The URL of the emote
+   * User constructor
+   * @param {Object} userData The user data
+   * @param {String} userData.id The user id
+   * @param {String | undefined} userData.botId The bot id
+   * @param {Object | undefined} userData.server The server
+   * @param {String} userData.server.id The server id
+   * @param {String | undefined} userData.type The user type
+   * @param {String} userData.name The username of the user
+   * @param {String} userData.createdAt The date the user was created
+   * @param {URL | undefined} userData.banner The banner of the user
+   * @param {URL | undefined} userData.avatar The avatar of the user
+   * @return {User&lt;String, String | undefined, Object | undefined, String, String, URL | undefined, URL | undefined>} The user id, the bot id, the server, the user type, the username of the user, the date the user was created, the banner of the user, the avatar of the user
    */
-  constructor(data) {  
-    this.serverId = data.serverId;
-    this.channelId = data.reaction.channelId
-    this.messageId = data.reaction.messageId;
-    this.createdBy = data.reaction.createdBy;
-    this.emoteId = data.reaction.emote.id;
-    this.emoteName = data.reaction.emote.name;
-    this.emotePartialUrl = data.reaction.emote.url;
-    this.emoteUrl = "https://img.guildedcdn.com" + data.reaction.emote.url;
-    this.raw = data.reaction;
+  constructor (userData) {
+    this.id = userData.id
+    this.username = userData.name
+    this.createdAt = userData.createdAt
+    this.server = userData.server?.id ? { id: userData.server.id } : null
+
+    if (userData.botId) {
+      this.botId = userData.botId
+    }
+
+    if (userData.type) {
+      this.userType = userData.type
+    }
+
+    if (userData.avatar) {
+      this.avatarURL = userData.avatar
+    }
+
+    if (userData.banner) {
+      this.bannerURL = userData.banner
+    }
+
+    // raw is all the data that is not used in the class, except for the token
+    this.raw = {
+      server: userData.server,
+      id: userData.id,
+      name: userData.name,
+      createdAt: userData.createdAt
+    }
+
+    // Create function to get user's profile picture
+    if (this.server) {
+      /**
+       * Function will return the user's profile picture
+       * @return {string | null} The user's profile picture
+       */
+      this.getAvatarURL = async () => {
+        return (
+          (await guser.getUser(this.id, this.server.id, userData.token))
+            .avatar ?? null
+        )
+      }
+
+      /**
+       * Function will return the user's banner
+       * @return {url | null} The user's banner
+       */
+      this.getBannerURL = async () => {
+        return (
+          (await guser.getUser(this.id, this.server.id, userData.token))
+            .banner ?? null
+        )
+      }
+    }
   }
 }
 
-module.exports.Reaction = Reaction;</code></pre>
+module.exports.User = User
+</code></pre>
         </article>
     </section>
 
