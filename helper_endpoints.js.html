@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>classes/structures/Reaction.js - Documentation</title>
+    <title>helper/endpoints.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">classes/structures/Reaction.js</h1>
+    <h1 class="page-title">helper/endpoints.js</h1>
     
 
     
@@ -42,35 +42,20 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>
-class Reaction {
-  /**
-   * Reaction Object
-   * @param {Object} data
-   * @param {String} data.serverId The ID of the server of the reaction
-   * @param {Object} data.reaction The reaction object
-   * @param {String} data.reaction.channelId The ID of the channel of the reaction
-   * @param {String} data.reaction.messageId The ID of the message of the reaction
-   * @param {String} data.reaction.createdBy The ID of the user who created the reaction
-   * @param {Object} data.reaction.emote The emote object
-   * @param {String} data.reaction.emote.id The ID of the emote
-   * @param {String} data.reaction.emote.name The name of the emote
-   * @param {String} data.reaction.emote.url The URL of the emote
-   */
-  constructor(data) {  
-    this.serverId = data.serverId;
-    this.channelId = data.reaction.channelId
-    this.messageId = data.reaction.messageId;
-    this.createdBy = data.reaction.createdBy;
-    this.emoteId = data.reaction.emote.id;
-    this.emoteName = data.reaction.emote.name;
-    this.emotePartialUrl = data.reaction.emote.url;
-    this.emoteUrl = "https://img.guildedcdn.com" + data.reaction.emote.url;
-    this.raw = data.reaction;
-  }
-}
+            <pre class="prettyprint source linenums"><code>const baseUrl = "https://www.guilded.gg/api/v1";
+const WS_URL = "wss://api.guilded.gg/v1/websocket";
 
-module.exports.Reaction = Reaction;</code></pre>
+module.exports.endpoints = {
+    /**
+     * Get the base url of the api
+     */
+    BASE: baseUrl,
+    CHANNELS_MESSAGES: (channelId) => `${baseUrl}/channels/${channelId}/messages`,
+    EDIT_MESSSAGE: (channelId, messageId) => `${baseUrl}/channels/${channelId}/messages/${messageId}`,
+    DELETE_MESSAGE: (channelId, messageId) => `${baseUrl}/channels/${channelId}/messages/${messageId}`,
+    REACT_MESSAGE: (channelId, messageId, emoteId) => `${baseUrl}/channels/${channelId}/content/${messageId}/emotes/${emoteId}`,
+    SERVER_MEMBERS: (serverId, memberId) => `${baseUrl}/servers/${serverId}/members/${memberId}`
+}</code></pre>
         </article>
     </section>
 
