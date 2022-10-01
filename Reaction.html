@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Global - Documentation</title>
+    <title>Reaction - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,7 +32,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Global</h1>
+    <h1 class="page-title">Reaction</h1>
     
 
     
@@ -45,7 +45,7 @@
 <header>
     
         <h2>
-        
+        Reaction
         </h2>
         
     
@@ -57,74 +57,9 @@
         
             
 
-<dl class="details">
-
     
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-            
-
-            
-        
-        </div>
-    
-
-    
-
-    
-
-    
-    
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id="send"><span class="type-signature"></span>send<span class="signature">(content)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+    <h4 class="name" id="Reaction"><span class="type-signature"></span>new Reaction<span class="signature">(data)</span><span class="type-signature"></span></h4>
 
     
 
@@ -136,7 +71,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="classes_structures_Message.js.html">classes/structures/Message.js</a>, <a href="classes_structures_Message.js.html#line39">line 39</a>
+        <a href="classes_structures_Reaction.js.html">classes/structures/Reaction.js</a>, <a href="classes_structures_Reaction.js.html#line16">line 16</a>
     </li></ul></dd>
     
 
@@ -176,7 +111,7 @@
 
 
 <div class="description usertext">
-    <p>Send a message to the current channel</p>
+    <p>Reaction Object</p>
 </div>
 
 
@@ -214,15 +149,12 @@
 
         <tr>
             
-                <td class="name"><code>content</code></td>
+                <td class="name"><code>data</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
-|
-
 <span class="param-type">Object</span>
 
 
@@ -233,7 +165,7 @@
 
             
 
-            <td class="description last"><p>The content of the message, this can be a string or an object</p>
+            <td class="description last">
                 <h6>Properties</h6>
                 
 
@@ -259,7 +191,7 @@
 
         <tr>
             
-                <td class="name"><code>content</code></td>
+                <td class="name"><code>serverId</code></td>
             
 
             <td class="type">
@@ -275,294 +207,14 @@
 
             
 
-            <td class="description last"><p>The content of the message</p></td>
+            <td class="description last"><p>The ID of the server of the reaction</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>isPrivate</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Whether the message is private or not</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>isSilent</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Boolean</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Whether the message is silent or not</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>replyMessageIds</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The message ids to reply to</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>embeds</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The embeds to send</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>attachments</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Array</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The attachments to send</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-            </td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    <p>The message object</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="sendMessage"><span class="type-signature">(async) </span>sendMessage<span class="signature">(Object, content)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="helper_Messages.js.html">helper/Messages.js</a>, <a href="helper_Messages.js.html#line18">line 18</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description usertext">
-    <p>Send a message to a selected channel</p>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>Object</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">*</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>content</code></td>
+                <td class="name"><code>reaction</code></td>
             
 
             <td class="type">
@@ -578,7 +230,7 @@
 
             
 
-            <td class="description last"><p>The content of the message</p>
+            <td class="description last"><p>The reaction object</p>
                 <h6>Properties</h6>
                 
 
@@ -600,29 +252,6 @@
     </thead>
 
     <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>content</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">String</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The content of the message</p></td>
-        </tr>
-
     
 
         <tr>
@@ -643,14 +272,14 @@
 
             
 
-            <td class="description last"><p>The channel id of the message</p></td>
+            <td class="description last"><p>The ID of the channel of the reaction</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>authToken</code></td>
+                <td class="name"><code>messageId</code></td>
             
 
             <td class="type">
@@ -666,20 +295,20 @@
 
             
 
-            <td class="description last"><p>The auth token of the bot</p></td>
+            <td class="description last"><p>The ID of the message of the reaction</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>isPrivate</code></td>
+                <td class="name"><code>createdBy</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Boolean</span>
+<span class="param-type">String</span>
 
 
             
@@ -689,20 +318,20 @@
 
             
 
-            <td class="description last"><p>If the message is private</p></td>
+            <td class="description last"><p>The ID of the user who created the reaction</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>isSilent</code></td>
+                <td class="name"><code>emote</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Boolean</span>
+<span class="param-type">Object</span>
 
 
             
@@ -712,20 +341,39 @@
 
             
 
-            <td class="description last"><p>If the message is silent</p></td>
-        </tr>
+            <td class="description last"><p>The emote object</p>
+                <h6>Properties</h6>
+                
 
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
     
 
         <tr>
             
-                <td class="name"><code>replyMessageIds</code></td>
+                <td class="name"><code>id</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Array</span>
+<span class="param-type">String</span>
 
 
             
@@ -735,20 +383,20 @@
 
             
 
-            <td class="description last"><p>The message ids to reply to</p></td>
+            <td class="description last"><p>The ID of the emote</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>embeds</code></td>
+                <td class="name"><code>name</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Array</span>
+<span class="param-type">String</span>
 
 
             
@@ -758,7 +406,44 @@
 
             
 
-            <td class="description last"><p>The embeds to send</p></td>
+            <td class="description last"><p>The name of the emote</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The URL of the emote</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
         </tr>
 
     
@@ -787,32 +472,27 @@
 
 
 
-<h5>Returns:</h5>
+
+
 
         
-<div class="param-desc">
-    <p>The message object</p>
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-    </dd>
-</dl>
+        </div>
+    
 
     
 
+    
 
+    
+    
+    
 
-        
+     
+
+    
+
+    
+
     
 
     
