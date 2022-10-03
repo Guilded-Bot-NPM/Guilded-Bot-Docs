@@ -474,7 +474,9 @@
 
     <pre class="prettyprint"><code>client.login();</code></pre>
 
-    <pre class="prettyprint"><code>client.login().then(() => {   console.log('Bot is ready!');});</code></pre>
+    <pre class="prettyprint"><code>client.login().then(() => {
+   console.log('Bot is ready!');
+});</code></pre>
 
 </div>
 
@@ -572,7 +574,9 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('closed', () => { console.log('Bot is closed!');});</code></pre>
+    <pre class="prettyprint"><code>client.on('closed', () => {
+ console.log('Bot is closed!');
+});</code></pre>
 
 </div>
 
@@ -804,7 +808,9 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('error', (error) => { console.log(error);});</code></pre>
+    <pre class="prettyprint"><code>client.on('error', (error) => {
+ console.log(error);
+});</code></pre>
 
 </div>
 
@@ -946,7 +952,9 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMemberBan', (member) => { console.log(member.nickname);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMemberBan', (member) => {
+ console.log(member.nickname);
+});</code></pre>
 
 </div>
 
@@ -1088,7 +1096,9 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMemberJoin', (member) => {   console.log(member.nickname);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMemberJoin', (member) => {
+   console.log(member.nickname);
+});</code></pre>
 
 </div>
 
@@ -1230,7 +1240,9 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMemberLeft', (member) => {  console.log(member.nickname);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMemberLeft', (member) => {
+  console.log(member.nickname);
+});</code></pre>
 
 </div>
 
@@ -1372,7 +1384,9 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMemberUpdate', (member) => {  console.log(member.nickname);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMemberUpdate', (member) => {
+  console.log(member.nickname);
+});</code></pre>
 
 </div>
 
@@ -1514,7 +1528,9 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMemberUnban', (member) => {   console.log(member.nickname);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMemberUnban', (member) => {
+   console.log(member.nickname);
+});</code></pre>
 
 </div>
 
@@ -1656,7 +1672,9 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMessageCreate', (message) => {  console.log(message.content); });</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMessageCreate', (message) => {
+  console.log(message.content); 
+});</code></pre>
 
 </div>
 
@@ -1798,7 +1816,9 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMessageDelete', (message) => { console.log(message.content);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMessageDelete', (message) => {
+ console.log(message.content);
+});</code></pre>
 
 </div>
 
@@ -1940,7 +1960,9 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMessageUpdate', (message) => { console.log(message.content);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMessageUpdate', (message) => {
+ console.log(message.content);
+});</code></pre>
 
 </div>
 
@@ -2082,7 +2104,9 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('messageReactionCreated', (reaction) => {  console.log(reaction.emoteId);});</code></pre>
+    <pre class="prettyprint"><code>client.on('messageReactionCreated', (reaction) => {
+  console.log(reaction.emoteId);
+});</code></pre>
 
 </div>
 
@@ -2224,7 +2248,9 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('messageReactionDeleted', (reaction) => { console.log(reaction.emoteId);});</code></pre>
+    <pre class="prettyprint"><code>client.on('messageReactionDeleted', (reaction) => {
+ console.log(reaction.emoteId);
+});</code></pre>
 
 </div>
 
@@ -2366,7 +2392,9 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('ready', () => {  console.log('Bot is ready!');});</code></pre>
+    <pre class="prettyprint"><code>client.on('ready', () => {
+  console.log('Bot is ready!');
+});</code></pre>
 
 </div>
 
@@ -2508,7 +2536,9 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverWebhookCreate', (webhook) => { console.log(webhook.name);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverWebhookCreate', (webhook) => {
+ console.log(webhook.name);
+});</code></pre>
 
 </div>
 
@@ -2650,7 +2680,9 @@
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverWebhookUpdate', (webhook) => {   console.log(webhook.name);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverWebhookUpdate', (webhook) => {
+   console.log(webhook.name);
+});</code></pre>
 
 </div>
 
@@ -2839,7 +2871,8 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>const { Client } = require('guilded.js');const client = new Client('token');</code></pre>
+    <pre class="prettyprint"><code>const { Client } = require('guilded.js');
+const client = new Client('token');</code></pre>
 
 </div>
 
@@ -3122,7 +3155,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 
     <pre class="prettyprint"><code>client.login();</code></pre>
 
-    <pre class="prettyprint"><code>client.login().then(() => {   console.log('Bot is ready!');});</code></pre>
+    <pre class="prettyprint"><code>client.login().then(() => {
+   console.log('Bot is ready!');
+});</code></pre>
 
 </div>
 
@@ -3220,7 +3255,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('closed', () => { console.log('Bot is closed!');});</code></pre>
+    <pre class="prettyprint"><code>client.on('closed', () => {
+ console.log('Bot is closed!');
+});</code></pre>
 
 </div>
 
@@ -3452,7 +3489,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('error', (error) => { console.log(error);});</code></pre>
+    <pre class="prettyprint"><code>client.on('error', (error) => {
+ console.log(error);
+});</code></pre>
 
 </div>
 
@@ -3594,7 +3633,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMemberBan', (member) => { console.log(member.nickname);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMemberBan', (member) => {
+ console.log(member.nickname);
+});</code></pre>
 
 </div>
 
@@ -3736,7 +3777,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMemberJoin', (member) => {   console.log(member.nickname);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMemberJoin', (member) => {
+   console.log(member.nickname);
+});</code></pre>
 
 </div>
 
@@ -3878,7 +3921,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMemberLeft', (member) => {  console.log(member.nickname);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMemberLeft', (member) => {
+  console.log(member.nickname);
+});</code></pre>
 
 </div>
 
@@ -4020,7 +4065,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMemberUpdate', (member) => {  console.log(member.nickname);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMemberUpdate', (member) => {
+  console.log(member.nickname);
+});</code></pre>
 
 </div>
 
@@ -4162,7 +4209,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMemberUnban', (member) => {   console.log(member.nickname);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMemberUnban', (member) => {
+   console.log(member.nickname);
+});</code></pre>
 
 </div>
 
@@ -4304,7 +4353,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMessageCreate', (message) => {  console.log(message.content); });</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMessageCreate', (message) => {
+  console.log(message.content); 
+});</code></pre>
 
 </div>
 
@@ -4446,7 +4497,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMessageDelete', (message) => { console.log(message.content);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMessageDelete', (message) => {
+ console.log(message.content);
+});</code></pre>
 
 </div>
 
@@ -4588,7 +4641,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverMessageUpdate', (message) => { console.log(message.content);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverMessageUpdate', (message) => {
+ console.log(message.content);
+});</code></pre>
 
 </div>
 
@@ -4730,7 +4785,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('messageReactionCreated', (reaction) => {  console.log(reaction.emoteId);});</code></pre>
+    <pre class="prettyprint"><code>client.on('messageReactionCreated', (reaction) => {
+  console.log(reaction.emoteId);
+});</code></pre>
 
 </div>
 
@@ -4872,7 +4929,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('messageReactionDeleted', (reaction) => { console.log(reaction.emoteId);});</code></pre>
+    <pre class="prettyprint"><code>client.on('messageReactionDeleted', (reaction) => {
+ console.log(reaction.emoteId);
+});</code></pre>
 
 </div>
 
@@ -5014,7 +5073,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('ready', () => {  console.log('Bot is ready!');});</code></pre>
+    <pre class="prettyprint"><code>client.on('ready', () => {
+  console.log('Bot is ready!');
+});</code></pre>
 
 </div>
 
@@ -5156,7 +5217,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverWebhookCreate', (webhook) => { console.log(webhook.name);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverWebhookCreate', (webhook) => {
+ console.log(webhook.name);
+});</code></pre>
 
 </div>
 
@@ -5298,7 +5361,9 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <div class="section-examples">
 <h5>Example</h5>
 
-    <pre class="prettyprint"><code>client.on('serverWebhookUpdate', (webhook) => {   console.log(webhook.name);});</code></pre>
+    <pre class="prettyprint"><code>client.on('serverWebhookUpdate', (webhook) => {
+   console.log(webhook.name);
+});</code></pre>
 
 </div>
 
@@ -5317,7 +5382,7 @@ See <a href="tutorial-example-bot.html">Example Bot</a> for an example</p>
 <br class="clear">
 
 <footer>
-    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> on Sun Oct 02 2022 23:49:14 GMT-0500 (hora estándar de Colombia) using the Minami theme.
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> on Mon Oct 03 2022 10:37:45 GMT-0500 (hora estándar de Colombia) using the Minami theme.
 </footer>
 
 <script>prettyPrint();</script>
