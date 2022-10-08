@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>classes/structures/user/user.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Tutorials</li><li class="nav-item"><a href="tutorial-example-bot.html">Example Bot</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Client.html">Client</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Client.html#login">login</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="ClientWebSocket.html">ClientWebSocket</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="ClientWebSocket.html#connect">connect</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Member.html">Member</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="MemberBan.html">MemberBan</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="MemberRemove.html">MemberRemove</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="MemberUpdated.html">MemberUpdated</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Message.html">Message</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Message.html#delete">delete</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Message.html#edit">edit</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Message.html#getMember">getMember</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Message.html#getUser">getUser</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Message.html#react">react</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="Message.html#reply">reply</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="MessageEmbed.html">MessageEmbed</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MessageEmbed.html#addField">addField</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MessageEmbed.html#setAuthor">setAuthor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MessageEmbed.html#setColor">setColor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MessageEmbed.html#setDescription">setDescription</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MessageEmbed.html#setFields">setFields</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MessageEmbed.html#setFooter">setFooter</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MessageEmbed.html#setImage">setImage</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MessageEmbed.html#setThumbnail">setThumbnail</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MessageEmbed.html#setTimestamp">setTimestamp</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MessageEmbed.html#setTitle">setTitle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="MessageEmbed.html#setURL">setURL</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Reaction.html">Reaction</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="User.html">User</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="User.html#getAvatarURL">getAvatarURL</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="User.html#getBannerURL">getBannerURL</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="UserSummary.html">UserSummary</a></span></li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="Webhook.html">Webhook</a></span></li><li class="nav-heading">Events</li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:closed">closed</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:debug">debug</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:destroy">destroy</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:error">error</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:memberBan">memberBan</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:memberJoin">memberJoin</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:memberLeave">memberLeave</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:memberRoleUpdate">memberRoleUpdate</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:memberUnban">memberUnban</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:memberUpdate">memberUpdate</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:message">message</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:messageDelete">messageDelete</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:messageUpdate">messageUpdate</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:reactionAdd">reactionAdd</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:reactionRemove">reactionRemove</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:ready">ready</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:webhookCreate">webhookCreate</a></span></li><li class="nav-heading"><span class="nav-item-type type-event">E</span><span class="nav-item-name"><a href="Client.html#event:webhookUpdate">webhookUpdate</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">classes/structures/user/user.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const member = require("../../../helper/members.js");
+
+class User {
+  /**
+   * User constructor
+   * @param {Object} userData The user data
+   * @param {String} userData.id The user id
+   * @param {String | undefined} userData.botId The bot id
+   * @param {Object | undefined} userData.serverId The server id
+   * @param {String | undefined} userData.type The user type
+   * @param {String} userData.name The username of the user
+   * @param {String} userData.createdAt The date the user was created
+   * @param {URL | undefined} userData.banner The banner of the user
+   * @param {URL | undefined} userData.avatar The avatar of the user
+   * @param {Client} client The client instance
+   * @return {User&lt;String, String | undefined, Object | undefined, String, String, URL | undefined, URL | undefined>} The user id, the bot id, the server, the user type, the username of the user, the date the user was created, the banner of the user, the avatar of the user
+   */
+  constructor(userData, client) {
+    /**
+     * The user avatar
+     * @type {string}
+     * @readonly
+     */
+    this.avatar =
+      userData.avatar ??
+      "https://img.guildedcdn.com/asset/DefaultUserAvatars/profile_" +
+        Math.floor(Math.random() * 4 + 1) +
+        ".png";
+
+    /**
+     * The user banner
+     * @type {string}
+     * @readonly
+     */
+    this.bannerURL = userData.banner ?? null;
+
+    /**
+     * The user is a bot
+     * @type {boolean}
+     * @readonly
+     */
+    this.bot = userData.botId
+      ? true
+      : String(userData.type).toLowerCase() === "bot"
+      ? true
+      : false;
+
+    /**
+     * The client instance
+     * @type {Client}
+     * @readonly
+     */
+    this.client = client;
+
+    /**
+     * The user created at
+     * @type {Date}
+     * @readonly
+     */
+    this.createdAt = new Date(userData.createdAt);
+
+    /**
+     * The user created at timestamp
+     * @type {number}
+     */
+    this.createdTimestamp = // If created at is not a date or if is NaN, return null
+      this.createdAt instanceof Date &amp;&amp; !isNaN(this.createdAt)
+        ? this.createdAt.getTime()
+        : null;
+
+    /**
+     * The user default avatar
+     * @type {string}
+     */
+    this.defaultAvatarURL =
+      "https://img.guildedcdn.com/asset/DefaultUserAvatars/profile_" +
+      Math.floor(Math.random() * 4 + 1) +
+      ".png";
+
+    /**
+     * The user id
+     * @type {string}
+     * @readonly
+     */
+    this.id = userData.id;
+
+    /**
+     * The user name
+     * @type {string}
+     * @readonly
+     */
+    this.username = userData.name;
+
+    /**
+     * If the user is a bot, this show the id of user that created the bot
+     * @type {string}
+     * @readonly
+     */
+    this.createdBy = userData.createdBy;
+
+    /**
+     * The all data withot processing
+     * @type {Object}
+     */
+    this.raw = userData;
+
+
+    if (global.cache.users.has(this.id)) {
+      const oldData = global.cache.users.get(this.id);
+      for (const key in this.raw) {
+        if (Boolean(this.raw[key]) &amp;&amp;
+          (oldData[key] !== this.raw[key] || oldData[key] === undefined || oldData[key] === null)) {
+          oldData[key] = this[key];
+        }
+      }
+      global.cache.users.set(this.id, oldData);
+
+      // Set all data to this
+      for (const key in oldData) {
+        if (key === "createdTimestamp") continue;
+
+        // If exists in this
+        if (this[key] !== undefined &amp;&amp; this[key] !== null) {
+          this[key] = oldData[key];
+        }
+
+        // Check the createdTimestamp, if exist createdAt, and is a date, create the createdTimestamp
+        if (key === "createdAt" &amp;&amp; this.createdAt instanceof Date) {
+          this.createdTimestamp = this.createdAt.getTime();
+        }
+
+      }
+    } else {
+      global.cache.users.set(this.id, this);
+    }
+
+    if (userData.serverId) {
+      /**
+       * Function will return the user's profile picture
+       * @return {string}
+       */
+      this.getAvatarURL = async () => {
+        const user = await member.updateAvatarUser(this);
+        return user.avatar;
+      };
+
+      /**
+       * Function will return the user's banner
+       * @return {string | null}
+       */
+      this.getBannerURL = async () => {
+        const user = await member.updateBannerUser(this);
+        return user.banner;
+      };
+    }
+  }
+}
+
+module.exports = User;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.11</a> on Sat Oct 08 2022 01:42:04 GMT-0500 (hora estándar de Colombia) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
